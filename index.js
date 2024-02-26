@@ -7,6 +7,11 @@ const PORT = process.env.PORT;
 const express = require("express");
 const app = express();
 const subcriberRoute = require("./app");
+const path = require("path");
+
+//built in middleware
+const staticPath = path.join(__dirname, "./public");
+app.use(express.static(staticPath));
 
 // Function to start the server
 const startServer = async () => {

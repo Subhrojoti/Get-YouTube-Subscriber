@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main">
+    <div class="project">
+      <h1><span class="name">Al</span><span class="title">mabetter</span>  Backend Project</h1>
+    </div>
+    <div class="heading">
+      <h2>Get Youtube Subscribers</h2>
+      <p>API Endpoint Documentation: Retrieving Subscriber Data</p>
+      <p>Use the following endpoint to retrieve an array of all subscribers:</p>
+    </div>
+    <div class="endpoints">
+      <div class="getsubs">
+        <p class="heading1"> Retrieve All Subscribers: </p>
+        <p class="endpoint2"> &#8226; GET http://localhost:3000/subscribers</p>
+        <p class="response1">Response with An array of Subscriber Objects</p>
+      </div>
+      <div class="getsubsName">
+        <p class="heading2"> Retrieve Subscribers' Names and Channels </p>
+        <p class="endpoint2"> &#8226; GET http://localhost:3000/subscribers/names</p>
+        <p class="response2">Response with An array of subscriber objects containing only the "name" and "subscribedChannel" fields.</p>
+      </div>
+      <div class="byid">
+        <p class="heading2"> Retrieve a Subscriber by ID: </p>
+        <p class="endpoint2"> &#8226; GET http://localhost:3000/subscribers/:id</p>
+        <div>
+          <div>
+            <p class="response3">Parameters</p>
+            <p class="response2">:id:The unique identifier of the subscriber.</p>
+            <p class="response3"> Responses </p>
+            <p class="response2"> &#8226; A single subscriber object corresponding to the provided ID.</p>
+            <p class="response2"> &#8226; If the provided ID does not match any subscriber, the server responds with <br> a status code 400 & an error message in the format { "message": "error.message" }. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
